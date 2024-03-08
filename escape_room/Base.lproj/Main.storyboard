@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GpJ-Kd-iFB">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="lFg-LE-Uhf">
+            <objects>
+                <viewController id="GpJ-Kd-iFB" customClass="ViewController" customModule="escape_room" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btz-OG-PcW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" id="MJ6-Q8-FTU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dbC-51-wZ6" appends="YES" id="ngz-3a-uYe"/>
+                                </connections>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBC-is-Uu2">
+                                <rect key="frame" x="330" y="38" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ok"/>
+                                <connections>
+                                    <action selector="ok:" destination="GpJ-Kd-iFB" eventType="touchUpInside" id="W0p-e8-8Qb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="JKQ-qm-PaT"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dbC-51-wZ6" appends="YES" id="MRM-VS-kLk"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="OK" destination="zBC-is-Uu2" id="OYq-Q9-VyI"/>
+                        <outlet property="arView" destination="MJ6-Q8-FTU" id="vD4-ta-NcO"/>
+                        <outlet property="longTap" destination="dbC-51-wZ6" id="YRK-oF-UeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Epg-rK-OIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="XTz-6t-zab" customClass="SCNScene"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="dbC-51-wZ6">
+                    <connections>
+                        <action selector="moveEntity:" destination="GpJ-Kd-iFB" id="2Fj-Qc-1ob"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-282.60869565217394" y="-121.46739130434784"/>
+        </scene>
+    </scenes>
+</document>
